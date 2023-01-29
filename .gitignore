@@ -20,4 +20,3 @@ yarn-error.log
 *.log
 .htaccess
 /storage
-/config

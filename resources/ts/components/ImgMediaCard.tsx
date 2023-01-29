@@ -4,11 +4,17 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+import Icon from '@mui/material/Icon';
 import Typography from '@mui/material/Typography';
 
-import HandshakeIcon from '@mui/icons-material/Handshake';
+type Props = {
+  title: string
+  desc: string
+  icon: typeof Icon
+}
 
-export const ImgMediaCard = ({title, desc, icon}) => {
+
+export const ImgMediaCard = (props: Props) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       {/* <CardMedia
@@ -19,11 +25,10 @@ export const ImgMediaCard = ({title, desc, icon}) => {
       /> */}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          { icon }
-          { title }
+          { props.title }
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          { desc }
+          { props.desc }
         </Typography>
       </CardContent>
       <CardActions>
